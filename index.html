@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vr Heaven | На седьмом небе от реальности</title>
+    
+    <!-- Google Fonts для чистой типографики -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        // Кастомный золотисто-синий акцент
+                        heavenlyGold: '#D4AF37',
+                    },
+                    borderRadius: {
+                        '3xl': '30px',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Амплитуда уменьшена еще на 15% (-12.2px) */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-12.2px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 4.2s ease-in-out infinite; 
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-sky-50 via-sky-100 to-blue-50 h-[100dvh] flex flex-col items-center py-6 px-4 text-slate-800 antialiased relative overflow-hidden w-screen">
+
+    <!-- Декоративные элементы свечения на фоне -->
+    <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl opacity-60 pointer-events-none"></div>
+    <div class="absolute bottom-[10%] right-[-10%] w-96 h-96 bg-sky-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 pointer-events-none"></div>
+
+    <!-- Основной контейнер -->
+    <main class="w-full max-w-md flex flex-col items-center z-10 flex-grow h-full">
+        
+        <!-- Обертка для центрирования основного контента по вертикали -->
+        <div class="w-full flex flex-col items-center justify-center flex-grow">
+            <!-- Шапка / Заголовок -->
+            <header class="flex flex-col items-center text-center w-full mb-6">
+                <!-- Место под логотип -->
+                <div class="mb-4 relative animate-float">
+                    <img 
+                        src="logo.jpg" 
+                        alt="Vr Heaven" 
+                        class="w-28 h-28 rounded-3xl object-cover shadow-xl border-4 border-white"
+                        onerror="this.src='https://placehold.co/400x400/e0f2fe/0284c7?text=VR+Heaven'"
+                    >
+                </div>
+                
+                <!-- Заголовок -->
+                <h1 class="text-xl md:text-2xl font-bold text-slate-800 mb-2 tracking-tight leading-snug">
+                    На седьмом небе от реальности.
+                </h1>
+
+                <!-- Подзаголовок (Акция) -->
+                <p class="text-[14px] text-slate-600 font-medium max-w-[95%] leading-relaxed">
+                    🎁 Акция: Закажите аренду шлема на срок от 3-х дней, и мы организуем бесплатную доставку до вашей двери.
+                </p>
+            </header>
+
+            <!-- Секция ссылок / Кнопок -->
+            <nav class="w-full flex flex-col gap-3">
+                
+                <!-- Кнопка Telegram -->
+                <a href="https://t.me/VrHeaven" target="_blank" rel="noopener noreferrer" 
+                   class="group relative flex items-center p-3 bg-white/70 backdrop-blur-md rounded-3xl shadow-sm border border-white hover:bg-white hover:shadow-md hover:border-sky-200 hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-r from-transparent to-sky-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
+                    <div class="w-12 h-12 flex items-center justify-center rounded-[20px] bg-sky-50 text-sky-500 group-hover:bg-sky-500 group-hover:text-white group-hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] ring-1 ring-transparent group-hover:ring-heavenlyGold/30 transition-all duration-300 z-10">
+                        <i class="fa-brands fa-telegram text-xl"></i>
+                    </div>
+                    <span class="ml-4 font-semibold text-slate-700 text-base md:text-lg group-hover:text-sky-600 transition-colors duration-300 z-10">Telegram</span>
+                    <i class="fa-solid fa-chevron-right ml-auto text-slate-300 group-hover:text-heavenlyGold/70 transition-colors duration-300 z-10"></i>
+                </a>
+
+                <!-- Кнопка WhatsApp -->
+                <a href="https://wa.me/79130692006" target="_blank" rel="noopener noreferrer" 
+                   class="group relative flex items-center p-3 bg-white/70 backdrop-blur-md rounded-3xl shadow-sm border border-white hover:bg-white hover:shadow-md hover:border-sky-200 hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-r from-transparent to-sky-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
+                    <div class="w-12 h-12 flex items-center justify-center rounded-[20px] bg-sky-50 text-emerald-500 group-hover:bg-emerald-500 group-hover:text-white group-hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] ring-1 ring-transparent group-hover:ring-heavenlyGold/30 transition-all duration-300 z-10">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                    </div>
+                    <span class="ml-4 font-semibold text-slate-700 text-base md:text-lg group-hover:text-emerald-600 transition-colors duration-300 z-10">WhatsApp</span>
+                    <i class="fa-solid fa-chevron-right ml-auto text-slate-300 group-hover:text-heavenlyGold/70 transition-colors duration-300 z-10"></i>
+                </a>
+
+                <!-- Кнопка Avito -->
+                <a href="https://www.avito.ru/novosibirsk/predlozheniya_uslug/arenda_vr_ochkov_oculus_quest_3s_7735645743?utm_campaign=native&utm_medium=item_page_android&utm_source=soc_sharing_seller" target="_blank" rel="noopener noreferrer" 
+                   class="group relative flex items-center p-3 bg-white/70 backdrop-blur-md rounded-3xl shadow-sm border border-white hover:bg-white hover:shadow-md hover:border-sky-200 hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-r from-transparent to-sky-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
+                    <div class="w-12 h-12 flex items-center justify-center rounded-[20px] bg-sky-50 text-indigo-500 group-hover:bg-indigo-500 group-hover:text-white group-hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] ring-1 ring-transparent group-hover:ring-heavenlyGold/30 transition-all duration-300 z-10">
+                        <i class="fa-solid fa-bag-shopping text-lg"></i>
+                    </div>
+                    <span class="ml-4 font-semibold text-slate-700 text-base md:text-lg group-hover:text-indigo-600 transition-colors duration-300 z-10">Аренда на Авито</span>
+                    <i class="fa-solid fa-chevron-right ml-auto text-slate-300 group-hover:text-heavenlyGold/70 transition-colors duration-300 z-10"></i>
+                </a>
+
+                <!-- Кнопка MAX -->
+                <a href="https://max.ru/u/f9LHodD0cOJNKJinB0NgOWQzlset9G4_n6e4eqzURC70fYM0fG3kdorubDg" target="_blank" rel="noopener noreferrer" 
+                   class="group relative flex items-center p-3 bg-white/70 backdrop-blur-md rounded-3xl shadow-sm border border-white hover:bg-white hover:shadow-md hover:border-sky-200 hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-r from-transparent to-sky-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
+                    <div class="w-12 h-12 flex items-center justify-center rounded-[20px] bg-sky-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white group-hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] ring-1 ring-transparent group-hover:ring-heavenlyGold/30 transition-all duration-300 z-10">
+                        <i class="fa-regular fa-message text-lg"></i>
+                    </div>
+                    <span class="ml-4 font-semibold text-slate-700 text-base md:text-lg group-hover:text-blue-600 transition-colors duration-300 z-10">MAX</span>
+                    <i class="fa-solid fa-chevron-right ml-auto text-slate-300 group-hover:text-heavenlyGold/70 transition-colors duration-300 z-10"></i>
+                </a>
+
+            </nav>
+        </div>
+
+        <!-- Футер -->
+        <footer class="mt-4 mb-2 text-center text-sm text-slate-400 font-medium w-full">
+            <p>&copy; 2024 Vr Heaven. Все права защищены.</p>
+        </footer>
+    </main>
+
+</body>
+</html>
