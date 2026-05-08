@@ -3,139 +3,372 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vr Heaven | На седьмом небе от реальности</title>
-    
-    <!-- Google Fonts для чистой типографики -->
+    <title>Аренда VR. На седьмом небе от реальности</title>
+    <meta name="description" content="Аренда Meta Quest 3S. Безупречный сервис, доставка до двери и настроенная библиотека игр. Ваше личное пространство виртуальной реальности.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome для иконок -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        // Кастомный золотисто-синий акцент
-                        heavenlyGold: '#D4AF37',
-                    },
-                    borderRadius: {
-                        '3xl': '30px',
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-        /* Амплитуда уменьшена еще на 15% (-12.2px) */
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-12.2px); }
-            100% { transform: translateY(0px); }
-        }
-        .animate-float {
-            animation: float 4.2s ease-in-out infinite; 
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body class="bg-gradient-to-br from-sky-50 via-sky-100 to-blue-50 h-[100dvh] flex flex-col items-center py-6 px-4 text-slate-800 antialiased relative overflow-hidden w-screen">
-
-    <!-- Декоративные элементы свечения на фоне -->
-    <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl opacity-60 pointer-events-none"></div>
-    <div class="absolute bottom-[10%] right-[-10%] w-96 h-96 bg-sky-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 pointer-events-none"></div>
-
-    <!-- Основной контейнер -->
-    <main class="w-full max-w-md flex flex-col items-center z-10 flex-grow h-full">
-        
-        <!-- Обертка для центрирования основного контента по вертикали -->
-        <div class="w-full flex flex-col items-center justify-center flex-grow">
-            <!-- Шапка / Заголовок -->
-            <header class="flex flex-col items-center text-center w-full mb-6">
-                <!-- Место под логотип -->
-                <div class="mb-4 relative animate-float">
-                    <img 
-                        src="logo.jpg" 
-                        alt="Vr Heaven" 
-                        class="w-28 h-28 rounded-3xl object-cover shadow-xl border-4 border-white"
-                        onerror="this.src='https://placehold.co/400x400/e0f2fe/0284c7?text=VR+Heaven'"
-                    >
-                </div>
-                
-                <!-- Заголовок -->
-                <h1 class="text-xl md:text-2xl font-bold text-slate-800 mb-2 tracking-tight leading-snug">
-                    На седьмом небе от реальности.
-                </h1>
-
-                <!-- Подзаголовок (Акция) -->
-                <p class="text-[14px] text-slate-600 font-medium max-w-[95%] leading-relaxed">
-                    🎁 Акция: Закажите аренду шлема на срок от 3-х дней, и мы организуем бесплатную доставку до вашей двери.
-                </p>
-            </header>
-
-            <!-- Секция ссылок / Кнопок -->
-            <nav class="w-full flex flex-col gap-3">
-                
-                <!-- Кнопка Telegram -->
-                <a href="https://t.me/VrHeaven" target="_blank" rel="noopener noreferrer" 
-                   class="group relative flex items-center p-3 bg-white/70 backdrop-blur-md rounded-3xl shadow-sm border border-white hover:bg-white hover:shadow-md hover:border-sky-200 hover:-translate-y-1 transition-all duration-300 overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-r from-transparent to-sky-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
-                    <div class="w-12 h-12 flex items-center justify-center rounded-[20px] bg-sky-50 text-sky-500 group-hover:bg-sky-500 group-hover:text-white group-hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] ring-1 ring-transparent group-hover:ring-heavenlyGold/30 transition-all duration-300 z-10">
-                        <i class="fa-brands fa-telegram text-xl"></i>
-                    </div>
-                    <span class="ml-4 font-semibold text-slate-700 text-base md:text-lg group-hover:text-sky-600 transition-colors duration-300 z-10">Telegram</span>
-                    <i class="fa-solid fa-chevron-right ml-auto text-slate-300 group-hover:text-heavenlyGold/70 transition-colors duration-300 z-10"></i>
-                </a>
-
-                <!-- Кнопка WhatsApp -->
-                <a href="https://wa.me/79130692006" target="_blank" rel="noopener noreferrer" 
-                   class="group relative flex items-center p-3 bg-white/70 backdrop-blur-md rounded-3xl shadow-sm border border-white hover:bg-white hover:shadow-md hover:border-sky-200 hover:-translate-y-1 transition-all duration-300 overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-r from-transparent to-sky-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
-                    <div class="w-12 h-12 flex items-center justify-center rounded-[20px] bg-sky-50 text-emerald-500 group-hover:bg-emerald-500 group-hover:text-white group-hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] ring-1 ring-transparent group-hover:ring-heavenlyGold/30 transition-all duration-300 z-10">
-                        <i class="fa-brands fa-whatsapp text-xl"></i>
-                    </div>
-                    <span class="ml-4 font-semibold text-slate-700 text-base md:text-lg group-hover:text-emerald-600 transition-colors duration-300 z-10">WhatsApp</span>
-                    <i class="fa-solid fa-chevron-right ml-auto text-slate-300 group-hover:text-heavenlyGold/70 transition-colors duration-300 z-10"></i>
-                </a>
-
-                <!-- Кнопка Avito -->
-                <a href="https://www.avito.ru/novosibirsk/predlozheniya_uslug/arenda_vr_ochkov_oculus_quest_3s_7735645743?utm_campaign=native&utm_medium=item_page_android&utm_source=soc_sharing_seller" target="_blank" rel="noopener noreferrer" 
-                   class="group relative flex items-center p-3 bg-white/70 backdrop-blur-md rounded-3xl shadow-sm border border-white hover:bg-white hover:shadow-md hover:border-sky-200 hover:-translate-y-1 transition-all duration-300 overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-r from-transparent to-sky-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
-                    <div class="w-12 h-12 flex items-center justify-center rounded-[20px] bg-sky-50 text-indigo-500 group-hover:bg-indigo-500 group-hover:text-white group-hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] ring-1 ring-transparent group-hover:ring-heavenlyGold/30 transition-all duration-300 z-10">
-                        <i class="fa-solid fa-bag-shopping text-lg"></i>
-                    </div>
-                    <span class="ml-4 font-semibold text-slate-700 text-base md:text-lg group-hover:text-indigo-600 transition-colors duration-300 z-10">Аренда на Авито</span>
-                    <i class="fa-solid fa-chevron-right ml-auto text-slate-300 group-hover:text-heavenlyGold/70 transition-colors duration-300 z-10"></i>
-                </a>
-
-                <!-- Кнопка MAX -->
-                <a href="https://max.ru/u/f9LHodD0cOJNKJinB0NgOWQzlset9G4_n6e4eqzURC70fYM0fG3kdorubDg" target="_blank" rel="noopener noreferrer" 
-                   class="group relative flex items-center p-3 bg-white/70 backdrop-blur-md rounded-3xl shadow-sm border border-white hover:bg-white hover:shadow-md hover:border-sky-200 hover:-translate-y-1 transition-all duration-300 overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-r from-transparent to-sky-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
-                    <div class="w-12 h-12 flex items-center justify-center rounded-[20px] bg-sky-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white group-hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] ring-1 ring-transparent group-hover:ring-heavenlyGold/30 transition-all duration-300 z-10">
-                        <i class="fa-regular fa-message text-lg"></i>
-                    </div>
-                    <span class="ml-4 font-semibold text-slate-700 text-base md:text-lg group-hover:text-blue-600 transition-colors duration-300 z-10">MAX</span>
-                    <i class="fa-solid fa-chevron-right ml-auto text-slate-300 group-hover:text-heavenlyGold/70 transition-colors duration-300 z-10"></i>
-                </a>
-
+    <header class="header">
+        <div class="container header__container">
+            <div class="header__brand">
+                <img src="logo.png" alt="Логотип" class="header__logo">
+                <span class="header__title color-polar-white">VR Heaven</span>
+            </div>
+            
+            <div class="header__divider"></div>
+            
+            <nav class="header__nav">
+                <a href="#benefits" class="js-smooth-scroll">Сервис</a>
+                <a href="#reviews" class="js-smooth-scroll">Отзывы</a>
+                <a href="#pricing" class="js-smooth-scroll">Условия</a>
             </nav>
+            
+            <a href="#" class="btn-pill header__btn-contact js-open-contact-modal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                Связаться
+            </a>
         </div>
+    </header>
 
-        <!-- Футер -->
-        <footer class="mt-4 mb-2 text-center text-sm text-slate-400 font-medium w-full">
-            <p>&copy; 2024 Vr Heaven. Все права защищены.</p>
-        </footer>
+    <main>
+        <!-- Блок 1: Главный экран -->
+        <section id="hero" class="hero reveal">
+            <div class="hero__content">
+                
+                <div class="hero__action-plaque mb-4" style="padding: 4px 14px; width: fit-content; margin-left: auto; margin-right: auto; border-radius: 100px; font-size: 0.95em;">
+                    <div class="hero__subtitle-wrapper" style="display: flex; align-items: center; gap: 8px;">
+                        <span style="display: block; width: 6px; height: 6px; border-radius: 50%; background-color: var(--amber-glow, #f59e0b); flex-shrink: 0;"></span>
+                        <p class="color-polar-white hero__promo-text" style="margin: 0; line-height: 1.4;">Бесплатная доставка до двери при бронировании от трех дней.</p>
+                    </div>
+                </div>
+
+                <h1 class="text-display-xl color-polar-white hero__title text-center">На седьмом небе<br>от реальности</h1>
+                
+                <div class="hero__actions mt-12">
+                    <a href="#" class="btn-pill btn-pill--large hero-btn js-open-contact-modal">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                        Связаться
+                    </a>
+                    <a href="#kit" class="btn-contact btn-secondary hero-btn js-smooth-scroll">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+                        Комплектация
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero__image-wrapper">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="hero-hands-mobile.avif">
+                    <img src="hero-hands.avif" alt="VR погружение" class="hero__image">
+                </picture>
+            </div>
+        </section>
+
+        <!-- Блок 2: Преимущества -->
+        <section id="benefits" class="benefits section-gap reveal">
+            <div class="container">
+                <h2 class="text-display color-polar-white section-title">Продуманный сервис. До мельчайших деталей.</h2>
+                <div class="grid-cards">
+                    <article class="card benefits__card">
+                        <h3 class="text-heading color-polar-white">Абсолютная готовность</h3>
+                        <p class="text-body color-ash-gray">Устройство настроено. Игры уже установлены. Вам остается лишь надеть шлем и начать.</p>
+                    </article>
+                    <article class="card benefits__card">
+                        <h3 class="text-heading color-polar-white">Персональная доставка</h3>
+                        <p class="text-body color-ash-gray">Мы привезем оборудование к вам домой. Бережно передадим и объясним основы управления.</p>
+                    </article>
+                    <article class="card benefits__card">
+                        <h3 class="text-heading color-polar-white">Идеальная гигиена</h3>
+                        <p class="text-body color-ash-gray">Полная дезинфекция перед каждым клиентом. Шлем прибывает к вам в идеальном состоянии.</p>
+                    </article>
+                    <article class="card benefits__card">
+                        <h3 class="text-heading color-polar-white">Непрерывная поддержка</h3>
+                        <p class="text-body color-ash-gray">Мы всегда находимся на связи. Поможем решить любой технический вопрос в любой момент.</p>
+                    </article>
+                    <article class="card benefits__card">
+                        <h3 class="text-heading color-polar-white">Подключение к компьютеру</h3>
+                        <p class="text-body color-ash-gray">Кабель Link в комплекте. Используйте ресурсы ПК для максимальной графики.</p>
+                    </article>
+                    <article class="card benefits__card">
+                        <h3 class="text-heading color-polar-white">Любые игры по запросу</h3>
+                        <p class="text-body color-ash-gray">Установим любые игры по вашему желанию. Вы получите шлем с нужной вам библиотекой.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок 3: Комплектация -->
+        <section id="kit" class="kit section-gap reveal">
+            <div class="container kit__container">
+                <div class="kit__content">
+                    <h2 class="text-display color-polar-white section-title" style="text-align: left;">Содержимое комплекта</h2>
+                    <ul class="kit__list text-body color-ash-gray">
+                        <li><span class="tag-status"></span>Гарнитура Meta Quest 3S</li>
+                        <li><span class="tag-status"></span>Эргономичное крепление</li>
+                        <li><span class="tag-status"></span>Оптический кабель Link</li>
+                        <li><span class="tag-status"></span>Оригинальный адаптер питания</li>
+                        <li><span class="tag-status"></span>Контроллеры Touch Plus</li>
+                        <li><span class="tag-status"></span>Адаптер для диоптрийных очков</li>
+                        <li><span class="tag-status"></span>Элементы питания для контроллеров</li>
+                    </ul>
+                </div>
+                <div class="kit__image-wrapper">
+                    <img src="kit.jpg" alt="Комплектация VR" class="kit__image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок 4: Каталог игр -->
+        <section id="games" class="games section-gap reveal">
+            <div class="container">
+                <h2 class="text-display color-polar-white section-title">Библиотека впечатлений</h2>
+                <div class="card" style="margin-bottom: var(--spacing-40); text-align: center;">Нужно что-то особенное? <strong style="color: var(--polar-white, #ffffff);">Мы бесплатно добавим желаемое приложение перед отправкой.</strong></div>
+                <div class="accordion">
+                    <div class="accordion__item">
+                        <button class="accordion__header text-heading color-polar-white">Динамика и экшен</button>
+                        <div class="accordion__content">
+                            <div class="accordion__inner games-list">
+                                <span class="game-chip">Gorn</span>
+                                <span class="game-chip">Gorn 2</span>
+                                <span class="game-chip">Swordsman VR</span>
+                                <span class="game-chip">Knockout League</span>
+                                <span class="game-chip">Blade and Sorcery</span>
+                                <span class="game-chip">Bonelab</span>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="accordion__item">
+                        <button class="accordion__header text-heading color-polar-white">Шутеры</button>
+                        <div class="accordion__content">
+                            <div class="accordion__inner games-list">
+                                <span class="game-chip">Pavlov Shack</span>
+                                <span class="game-chip">Sniper Elite VR</span>
+                                <span class="game-chip">Elven Assassin</span>
+                                <span class="game-chip">Ghostbusters: Rise of the Ghost Lord</span>
+                                <span class="game-chip">Onward</span>
+                                <span class="game-chip">Gun Club VR</span>
+                                <span class="game-chip">Jurassic World Aftermath Collection</span>
+                                <span class="game-chip">The Light Brigade</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__header text-heading color-polar-white">Хоррор и выживание</button>
+                        <div class="accordion__content">
+                            <div class="accordion__inner games-list">
+                                <span class="game-chip">The Walking Dead: Saints & Sinners, Chapter 2</span>
+                                <span class="game-chip">Resident Evil 4 VR</span>
+                                <span class="game-chip">Metro: Awakening</span>
+                                <span class="game-chip">Vampire: The Masquerade – Justice</span>
+                                <span class="game-chip">Arizona Sunshine 2</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__header text-heading color-polar-white">Музыка и ритм</button>
+                        <div class="accordion__content">
+                            <div class="accordion__inner games-list">
+                                <span class="game-chip">Beat Saber</span>
+                                <span class="game-chip">Pistol Whip</span>
+                                <span class="game-chip">Fruit Ninja VR</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__header text-heading color-polar-white">Сюжетные приключения</button>
+                        <div class="accordion__content">
+                            <div class="accordion__inner games-list">
+                                <span class="game-chip">Assassin's Creed Nexus VR</span>
+                                <span class="game-chip">Batman: Arkham VR</span>
+                                <span class="game-chip">SUPERHOT VR</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__header text-heading color-polar-white">Спорт и движение</button>
+                        <div class="accordion__content">
+                            <div class="accordion__inner games-list">
+                                <span class="game-chip">Eleven Table Tennis</span>
+                                <span class="game-chip">Real VR Fishing</span>
+                                <span class="game-chip">All-In-One Sports VR</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__header text-heading color-polar-white">Головоломки и симуляции</button>
+                        <div class="accordion__content">
+                            <div class="accordion__inner games-list">
+                                <span class="game-chip">Job Simulator</span>
+                                <span class="game-chip">Vacation Simulator</span>
+                                <span class="game-chip">Angry Birds VR</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок 5: Отзывы -->
+        <section id="reviews" class="reviews section-gap reveal">
+            <div class="container">
+                <div class="reviews__header">
+                    <h2 class="text-display color-polar-white section-title" style="margin-bottom: 0;">Опыт клиентов</h2>
+                    <div class="reviews__actions" style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+                        <a href="#" target="_blank" rel="noopener" class="btn-contact btn-secondary" style="display: inline-flex; align-items: center; height: 100%; box-sizing: border-box;">Все отзывы на платформе Авито</a>
+                        <div class="carousel__controls" style="display: flex; gap: 8px;">
+                            <button class="carousel__btn" id="carousel-prev" aria-label="Предыдущий отзыв">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                            </button>
+                            <button class="carousel__btn" id="carousel-next" aria-label="Следующий отзыв">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-wrapper">
+                <div class="carousel" id="reviews-carousel">
+                    <article class="card carousel__slide">
+                        <h3 class="text-subheading color-polar-white">Егор Шальковский</h3>
+                        <p class="text-body color-ash-gray">Брал на пользование дважды, все очень понравилось. Продавец сам доставит и согласует удобное время. Очки приехали чистые, куча игр, можно попросить установить почти любую игру. Максимально рекомендую!</p>
+                    </article>
+                    <article class="card carousel__slide">
+                        <h3 class="text-subheading color-polar-white">Сергей</h3>
+                        <p class="text-body color-ash-gray">Добродушный молодой человек, объяснил как пользоваться данным комплектом, очень сильно благодарен.</p>
+                    </article>
+                    <article class="card carousel__slide">
+                        <h3 class="text-subheading color-polar-white">Ольга</h3>
+                        <p class="text-body color-ash-gray">Брала ребенку на день рождения! Отличное развлечение для детей и взрослых! Огромное спасибо за предоставленную услугу! Будем обращаться еще!</p>
+                    </article>
+                    <article class="card carousel__slide">
+                        <h3 class="text-subheading color-polar-white">Алексей Русаков</h3>
+                        <p class="text-body color-ash-gray">Пользовались шлемом неделю. Шлем был предоставлен в полной комплектации. Задумываетесь о приобретении личного устройства, но не уверены? Попробуйте прокат, это снимет многие вопросы.</p>
+                    </article>
+                    <article class="card carousel__slide">
+                        <h3 class="text-subheading color-polar-white">Полина</h3>
+                        <p class="text-body color-ash-gray">Эта неделя прошла великолепно, продавец все доходчиво объяснял и отвечал на все вопросы, как и курьер. К тому же приятные цены, буду обращаться еще!!</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок 6: Цены и условия -->
+        <section id="pricing" class="pricing section-gap reveal">
+            <div class="container pricing__container">
+                <h2 class="text-display color-polar-white section-title">Прозрачные условия</h2>
+                
+                <div class="pricing__layout">
+                    <div class="conditions-grid mb-4">
+                        <div class="condition-card">
+                            <span class="text-body condition-title color-polar-white">Официальный договор <br><span class="color-ash-gray" style="text-transform: none;">Оформление по паспорту</span></span>
+                        </div>
+                        <div class="condition-card">
+                            <span class="text-body condition-title color-polar-white">Удобный расчет <br><span class="color-ash-gray" style="text-transform: none;">Наличные или перевод</span></span>
+                        </div>
+                    </div>
+
+                    <div class="pricing__table card">
+                        <div class="pricing__header">
+                            <h3 class="text-heading color-polar-white">Стоимость аренды</h3>
+                            <p class="text-caption color-slate">РАСШИРЕННЫЙ ПЕРИОД — ВАШЕ ПРЕИМУЩЕСТВО</p>
+                        </div>
+                        
+                        <div class="price-list color-polar-white">
+                            <div class="price-row"><span>1 сутки</span><span>1200 руб.</span></div>
+                            <div class="price-row"><span>2 суток</span><span>2100 руб.</span></div>
+                            <div class="price-row"><span>3 суток</span><span>3000 руб.</span></div>
+                            <div class="price-row"><span>4 суток</span><span>3900 руб.</span></div>
+                            <div class="price-row"><span>5 суток</span><span>4800 руб.</span></div>
+                            <div class="price-row price-highlight color-amber-glow">
+                                <span style="display: flex; align-items: center; gap: 8px;">
+                                    СЕМЬ ДНЕЙ 
+                                    <span class="tag-neon-green text-caption" style="padding: 2px 8px; font-size: 0.75em; line-height: 1.2;">преимущество до 40%</span>
+                                </span>
+                                <span>5500 руб.</span>
+                            </div>
+                        </div>
+                        <p class="text-subheading color-polar-white mt-4" style="text-align: center; font-weight: 700;">
+                            <span class="color-ash-gray text-caption" style="display: block; font-weight: normal; margin-bottom: 4px;">Базовая стоимость доставки: от 300 руб.</span>
+                            Бронирование от трех дней включает доставку <span class="color-neon-green">бесплатно.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок 7: Бонусы -->
+        <section id="bonuses" class="bonuses section-gap reveal">
+            <div class="container">
+                <h2 class="text-display color-polar-white section-title">Особое отношение</h2>
+                <div class="grid-cards grid-2">
+                    <article class="card bonus-card text-center">
+                        <span class="text-display color-amber-glow">-20%</span>
+                        <h3 class="text-heading color-polar-white" style="margin-top: 24px;">Привилегия в ваш день рождения.</h3>
+                    </article>
+                    <article class="card bonus-card text-center">
+                        <span class="text-display color-amber-glow">-10%</span>
+                        <h3 class="text-heading color-polar-white" style="margin-top: 24px;">На вторую аренду в этот месяц.</h3>
+                    </article>
+                </div>
+            </div>
+        </section>
     </main>
 
-</body>
+    <!-- Блок 8: Подвал (Footer) -->
+    <footer class="footer section-gap reveal">
+        <div class="container text-center">
+            <h2 class="text-display color-polar-white section-title" style="margin-bottom: 24px;">Готовы начать? <br>Выберите удобные для вас даты.</h2>
+            <p class="text-subheading color-ash-gray footer__desc">Напишите нам. Мы обсудим детали и подготовим оборудование к вашему погружению.</p>
+            <a href="#" class="btn-pill btn-pill--large hero-btn js-open-contact-modal" style="display: inline-flex;">Связаться с нами</a>
+        </div>
+    </footer>
+
+    <!-- МОДАЛЬНОЕ ОКНО 1: ВЫБОР КОНТАКТА -->
+    <div id="contact-modal" class="modal-overlay" aria-hidden="true" style="backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);">
+        <div class="modal-dialog card" style="position: relative; max-width: 440px; width: 100%;">
+            
+            <button class="js-close-contact-modal" aria-label="Закрыть" style="position: absolute; top: 16px; right: 16px; background: none; border: none; padding: 4px; cursor: pointer; color: var(--ash-gray); display: flex; align-items: center; justify-content: center;">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            
+            <h3 class="text-heading-sm color-polar-white" style="text-transform: none; font-weight: 700 !important; margin-bottom: 24px; padding-right: 32px;">Выберите удобный формат связи</h3>
+            
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+                <a href="#" target="_blank" rel="noopener" class="btn-contact btn-secondary" style="justify-content: center;">Telegram</a>
+                <a href="https://wa.me/79130692006" target="_blank" rel="noopener" class="btn-contact btn-secondary" style="justify-content: center;">WhatsApp</a>
+                <a href="#" target="_blank" rel="noopener" class="btn-contact btn-secondary" style="justify-content: center;">Max</a>
+                <a href="#" target="_blank" rel="noopener" class="btn-contact btn-secondary" style="justify-content: center;">Авито</a>
+                
+                <button id="trigger-call-confirm" class="btn-contact btn-primary" style="justify-content: center; margin-top: 8px; cursor: pointer; border: none; width: 100%; font-family: inherit;">
+                    Голосовой вызов (+7 913 069-20-06)
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- МОДАЛЬНОЕ ОКНО 2: ПОДТВЕРЖДЕНИЕ ЗВОНКА -->
+    <div id="call-confirm-modal" class="modal-overlay" aria-hidden="true" style="backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); z-index: 2000;">
+        <div class="modal-dialog card" style="max-width: 400px; width: 100%;">
+            <h3 class="text-heading-sm color-polar-white" style="text-transform: none; font-weight: 700 !important;">Подтверждение вызова</h3>
+            <div style="margin: 24px 0 32px 0;">
+                <p class="text-body color-ash-gray">Инициировать голосовой вызов по номеру</p>
+                <div style="margin-top: 12px;">
+                    <strong class="color-polar-white text-heading-sm">+7-913-069-20-06</strong>
+                </div>
+            </div>
+            <div class="modal-actions" style="display: flex; gap: 12px;">
+                <button class="btn-contact btn-secondary" id="call-cancel" style="flex: 1; justify-content: center;">Отменить</button>
+                <a href="tel:+79130692006" class="btn-contact btn-primary" id="call-final-trigger" style="flex: 1; justify-content: center;">Продолжить</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+   </body>
 </html>
