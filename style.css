@@ -232,8 +232,14 @@ ul { list-style: none; }
 .pricing__table { padding: var(--card-padding); }
 .pricing__header { text-align: center; margin-bottom: var(--spacing-24); }
 .pricing__header p { margin-top: var(--spacing-8); }
-.price-row { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px dashed var(--color-dark-carbon); }
+.price-row { display: grid; grid-template-columns: 1fr 6.25rem 6.25rem; column-gap: var(--spacing-24); align-items: center; padding: 16px 0; border-bottom: 1px dashed var(--color-dark-carbon); }
 .price-row:last-child { border-bottom: none; }
+/* Колонки моделей (Quest 3 / Quest 3S): фиксированная ширина в rem — она одинакова
+   во всех строках (каждая .price-row — отдельный grid), поэтому цены строго под заголовками */
+.price-row > span:nth-child(2), .price-row > span:nth-child(3) { text-align: center; white-space: nowrap; }
+/* Шапка с названиями колонок (Период / Quest 3 / Quest 3S) */
+.price-row--head { padding-top: 0; }
+.price-row--head > span { font-weight: 700; }
 .price-highlight { font-weight: 700; font-size: 1.125rem; }
 
 /* Footer */
@@ -246,3 +252,61 @@ ul { list-style: none; }
 .modal-dialog { max-width: 400px; width: 100%; transform: translateY(20px) scale(0.95); transition: transform 0.3s var(--ease-smooth); }
 .modal-overlay.active .modal-dialog { transform: translateY(0) scale(1); }
 .modal-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+/* Переключатели контента desktop/mobile (по умолчанию — десктоп) */
+.show-on-mobile { display: none; }
+.carousel__side-btn { display: none; }
+
+/* ============================================================
+   ШИРОКИЕ ЭКРАНЫ (≥ 544px): стрелки перелистывания — по бокам карусели,
+   верхние (дублирующие) кнопки прячем, ссылку «Все отзывы» — к краю
+   ============================================================ */
+@media (min-width: 544px) {
+    .reviews__header .carousel__controls { display: none; }
+    .carousel__side-btn { display: inline-flex; position: absolute; top: 50%; transform: translateY(-50%); z-index: 15; }
+    .carousel__side-btn:hover, .carousel__side-btn:focus-visible { transform: translateY(-50%); }
+    .carousel__side-btn--prev { left: 16px; }
+    .carousel__side-btn--next { right: 16px; }
+}
+
+/* ============================================================
+   УЗКАЯ (МОБИЛЬНАЯ) ВЕРСИЯ — экраны строго меньше 544px
+   ============================================================ */
+@media (max-width: 543.98px) {
+
+    /* Переключение текстов desktop -> mobile */
+    .hide-on-mobile { display: none; }
+    .show-on-mobile { display: inline; }
+
+    /* 1. Верхняя плашка доставки — компактнее
+          (высота ~ -20%, вертикальные отступы ~ -10%, текст ~ -13%) */
+    .hero__action-plaque { padding-top: 3.6px !important; padding-bottom: 3.6px !important; }
+    .hero__promo-text { font-size: 0.76rem; line-height: 1.2 !important; }
+
+    /* 2. Главное изображение — во всю ширину узкого экрана (края к краям экрана),
+          натуральные пропорции, без искажений */
+    .hero__image-wrapper { height: auto; margin-top: var(--spacing-16); }
+    .hero__image { width: 100%; height: auto; }
+
+    /* 4. Комплект — фото перед списком, но после заголовка.
+          display: contents «распаковывает» kit__content, чтобы заголовок, фото и
+          список стали соседями одного flex-контейнера и переставлялись через order */
+    .kit__container { display: flex; flex-direction: column; gap: var(--spacing-24); }
+    .kit__content { display: contents; }
+    .kit__content > h2 { order: 1; margin-bottom: 0; }
+    .kit__image-wrapper { order: 2; }
+    .kit__list { order: 3; }
+
+    /* 5. Узкие экраны: верхние кнопки листания отзывов — к правому краю */
+    .reviews__actions { width: 100%; justify-content: space-between; }
+    .reviews__actions .carousel__controls { margin: 0; }
+
+    /* 6. «СЕМЬ ДНЕЙ» и плашка «преимущество до 40%» — столбиком, прижаты к левому краю */
+    .price-highlight > span:first-child { flex-direction: column; align-items: flex-start !important; gap: var(--spacing-4) !important; }
+    .price-highlight .tag-neon-green { padding: 1.4px 5.6px !important; font-size: 0.55em !important; }
+
+    /* 9. Таблица цен — компактнее, чтобы три колонки помещались по ширине */
+    .price-list { font-size: 0.9rem; }
+    .price-row { grid-template-columns: 1fr 5.25rem 5.25rem; column-gap: var(--spacing-8); }
+    .price-highlight { font-size: 0.9rem; }
+}

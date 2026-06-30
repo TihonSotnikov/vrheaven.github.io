@@ -16,7 +16,6 @@
         <div class="container header__container">
             <div class="header__brand">
                 <img src="logo.png" alt="Логотип" class="header__logo">
-                <span class="header__title color-polar-white">VR Heaven</span>
             </div>
             
             <div class="header__divider"></div>
@@ -62,7 +61,7 @@
             
             <div class="hero__image-wrapper">
                 <picture>
-                    <source media="(max-width: 768px)" srcset="hero-hands-mobile.avif">
+                    <source media="(max-width: 543.98px)" srcset="hero-hands-mobile.avif">
                     <img src="hero-hands.avif" alt="VR погружение" class="hero__image">
                 </picture>
             </div>
@@ -90,7 +89,7 @@
                         <p class="text-body color-ash-gray">Мы всегда находимся на связи. Поможем решить любой технический вопрос в любой момент.</p>
                     </article>
                     <article class="card benefits__card">
-                        <h3 class="text-heading color-polar-white">Подключение к компьютеру</h3>
+                        <h3 class="text-heading color-polar-white"><span class="hide-on-mobile">Подключение к компьютеру</span><span class="show-on-mobile">Подключение к ПК</span></h3>
                         <p class="text-body color-ash-gray">Кабель Link в комплекте. Используйте ресурсы ПК для максимальной графики.</p>
                     </article>
                     <article class="card benefits__card">
@@ -218,12 +217,12 @@
                 <div class="reviews__header">
                     <h2 class="text-display color-polar-white section-title" style="margin-bottom: 0;">Опыт клиентов</h2>
                     <div class="reviews__actions" style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank" rel="noopener" class="btn-contact btn-secondary" style="display: inline-flex; align-items: center; height: 100%; box-sizing: border-box;">Все отзывы на платформе Авито</a>
-                        <div class="carousel__controls" style="display: flex; gap: 8px;">
-                            <button class="carousel__btn" id="carousel-prev" aria-label="Предыдущий отзыв">
+                        <a href="https://www.avito.ru/novosibirsk/predlozheniya_uslug/arenda_vr_ochkov_oculus_quest_3s_7735645743?utm_campaign=native&utm_medium=item_page_android&utm_source=soc_sharing_seller" target="_blank" rel="noopener" class="btn-contact btn-secondary" style="display: inline-flex; align-items: center; height: 100%; box-sizing: border-box;"><span class="hide-on-mobile">Все отзывы на платформе Авито</span><span class="show-on-mobile">Все отзывы</span></a>
+                        <div class="carousel__controls">
+                            <button class="carousel__btn js-carousel-prev" id="carousel-prev" aria-label="Предыдущий отзыв">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
                             </button>
-                            <button class="carousel__btn" id="carousel-next" aria-label="Следующий отзыв">
+                            <button class="carousel__btn js-carousel-next" id="carousel-next" aria-label="Следующий отзыв">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
                             </button>
                         </div>
@@ -232,6 +231,12 @@
             </div>
 
             <div class="carousel-wrapper">
+                <button class="carousel__btn carousel__side-btn carousel__side-btn--prev js-carousel-prev" aria-label="Предыдущий отзыв">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <button class="carousel__btn carousel__side-btn carousel__side-btn--next js-carousel-next" aria-label="Следующий отзыв">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
                 <div class="carousel" id="reviews-carousel">
                     <article class="card carousel__slide">
                         <h3 class="text-subheading color-polar-white">Егор Шальковский</h3>
@@ -279,16 +284,22 @@
                         </div>
                         
                         <div class="price-list color-polar-white">
-                            <div class="price-row"><span>1 сутки</span><span>1200 руб.</span></div>
-                            <div class="price-row"><span>2 суток</span><span>2100 руб.</span></div>
-                            <div class="price-row"><span>3 суток</span><span>3000 руб.</span></div>
-                            <div class="price-row"><span>4 суток</span><span>3900 руб.</span></div>
-                            <div class="price-row"><span>5 суток</span><span>4800 руб.</span></div>
+                            <div class="price-row price-row--head text-caption color-ash-gray">
+                                <span>Период</span>
+                                <span>Quest 3</span>
+                                <span>Quest 3S</span>
+                            </div>
+                            <div class="price-row"><span>1 сутки</span><span>1550 руб.</span><span>1200 руб.</span></div>
+                            <div class="price-row"><span>2 суток</span><span>2600 руб.</span><span>2100 руб.</span></div>
+                            <div class="price-row"><span>3 суток</span><span>3700 руб.</span><span>3000 руб.</span></div>
+                            <div class="price-row"><span>4 суток</span><span>4400 руб.</span><span>3900 руб.</span></div>
+                            <div class="price-row"><span>5 суток</span><span>5200 руб.</span><span>4800 руб.</span></div>
                             <div class="price-row price-highlight color-amber-glow">
-                                <span style="display: flex; align-items: center; gap: 8px;">
-                                    СЕМЬ ДНЕЙ 
+                                <span style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                                    СЕМЬ ДНЕЙ
                                     <span class="tag-neon-green text-caption" style="padding: 2px 8px; font-size: 0.75em; line-height: 1.2;">преимущество до 40%</span>
                                 </span>
+                                <span>6000 руб.</span>
                                 <span>5500 руб.</span>
                             </div>
                         </div>
@@ -340,12 +351,12 @@
             
             <div style="display: flex; flex-direction: column; gap: 12px;">
                 <a href="#" target="_blank" rel="noopener" class="btn-contact btn-secondary" style="justify-content: center;">Telegram</a>
-                <a href="https://wa.me/79130692006" target="_blank" rel="noopener" class="btn-contact btn-secondary" style="justify-content: center;">WhatsApp</a>
+                <a href="https://wa.me/79538863360" target="_blank" rel="noopener" class="btn-contact btn-secondary" style="justify-content: center;">WhatsApp</a>
                 <a href="#" target="_blank" rel="noopener" class="btn-contact btn-secondary" style="justify-content: center;">Max</a>
                 <a href="#" target="_blank" rel="noopener" class="btn-contact btn-secondary" style="justify-content: center;">Авито</a>
                 
                 <button id="trigger-call-confirm" class="btn-contact btn-primary" style="justify-content: center; margin-top: 8px; cursor: pointer; border: none; width: 100%; font-family: inherit;">
-                    Голосовой вызов (+7 913 069-20-06)
+                    Голосовой вызов (+7-953-886-33-60)
                 </button>
             </div>
         </div>
@@ -358,12 +369,12 @@
             <div style="margin: 24px 0 32px 0;">
                 <p class="text-body color-ash-gray">Инициировать голосовой вызов по номеру</p>
                 <div style="margin-top: 12px;">
-                    <strong class="color-polar-white text-heading-sm">+7-913-069-20-06</strong>
+                    <strong class="color-polar-white text-heading-sm">+7-953-886-33-60</strong>
                 </div>
             </div>
             <div class="modal-actions" style="display: flex; gap: 12px;">
                 <button class="btn-contact btn-secondary" id="call-cancel" style="flex: 1; justify-content: center;">Отменить</button>
-                <a href="tel:+79130692006" class="btn-contact btn-primary" id="call-final-trigger" style="flex: 1; justify-content: center;">Продолжить</a>
+                <a href="tel:+79538863360" class="btn-contact btn-primary" id="call-final-trigger" style="flex: 1; justify-content: center;">Продолжить</a>
             </div>
         </div>
     </div>

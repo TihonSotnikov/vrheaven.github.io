@@ -41,10 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. БЕСШОВНАЯ БЕСКОНЕЧНАЯ КАРУСЕЛЬ (АВТОСКРОЛЛ + МЫШЬ + ТРЕКПАД)
     const carousel = document.getElementById('reviews-carousel');
-    const prevBtn = document.getElementById('carousel-prev');
-    const nextBtn = document.getElementById('carousel-next');
+    const prevBtns = document.querySelectorAll('.js-carousel-prev');
+    const nextBtns = document.querySelectorAll('.js-carousel-next');
 
-    if (carousel && prevBtn && nextBtn) {
+    if (carousel && prevBtns.length && nextBtns.length) {
         const wrapper = carousel.parentElement;
         const originalSlides = Array.from(carousel.children);
         
@@ -121,14 +121,14 @@ document.addEventListener('DOMContentLoaded', () => {
         carouselObserver.observe(wrapper);
 
         // --- ЛОГИКА КНОПОК ---
-        nextBtn.addEventListener('click', () => { 
-            moveNext(); 
-            if (isStarted) startAutoplay(); 
-        });
-        prevBtn.addEventListener('click', () => { 
-            movePrev(); 
-            if (isStarted) startAutoplay(); 
-        });
+        nextBtns.forEach(btn => btn.addEventListener('click', () => {
+            moveNext();
+            if (isStarted) startAutoplay();
+        }));
+        prevBtns.forEach(btn => btn.addEventListener('click', () => {
+            movePrev();
+            if (isStarted) startAutoplay();
+        }));
 
         // --- ЛОГИКА ПАУЗЫ ПРИ НАВЕДЕНИИ ---
         wrapper.addEventListener('mouseenter', () => {
